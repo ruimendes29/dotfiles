@@ -12,7 +12,10 @@
 
 ```shell
 git clone https://github.com/nelsonmestevao/dotfiles ~/.dotfiles
+<<<<<<< HEAD
+=======
 git clone https://github.com/nelsonmestevao/spells   ~/.spells
+>>>>>>> 8d0471f
 cd ~/.dotfiles
 sh install.sh
 ```

@@ -1,8 +1,8 @@
 [user]
-  name = Nelson Estevão
-  email = nelsonmestevao@gmail.com
+  name = Pedro Ribeiro
+  email = pedroescolaribeiro@gmail.com
 [github]
-  user = nelsonmestevao
+  user = pedroribeiro22
 [web]
   browser = google-chrome
 [core]
@@ -57,9 +57,9 @@
   default = simple
 [pull]
   rebase = true
-[url "git@github.com:nelsonmestevao/"]
+[url "git@github.com:pedroribeiro22/"]
     insteadOf = gh:
-[url "git@gitlab.com:nelsonmestevao/"]
+[url "git@gitlab.com:pedroribeiro22/"]
     insteadOf = gl:
 [color]
   ui = true
