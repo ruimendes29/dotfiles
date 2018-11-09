@@ -2,7 +2,7 @@
 unalias please
 
 # "MUST HAVE" ALIASES
-alias dot="cd $HOME/.dotfiles && nvim ."
+alias dot="cd $HOME/.dotfiles & code ."
 
 alias c="cd $HOME/Code && ls -l"
 alias s="cd $HOME/Snippets && ls -l"
