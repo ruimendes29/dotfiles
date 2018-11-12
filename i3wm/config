@@ -40,10 +40,10 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # start a terminal with tmux
-bindsym $mod+Shift+Return exec i3-sensible-terminal -e 'tmux'
+bindsym $mod+Shift+Return exec termite -e 'tmux'
 
 bindsym $mod+Shift+t exec terminology
 
