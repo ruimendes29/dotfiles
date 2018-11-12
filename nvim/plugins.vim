@@ -72,6 +72,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kristijanhusak/vim-hybrid-material'
 
 """ Languages
 
