@@ -6,7 +6,7 @@
         "url": "https://gitlab.com/search?utf8=%E2%9C%93&search=%s"
     },
     {
-        "iconPath": ":google",
+        "iconPath": "/home/pedro/.config/albert/org.albert.extension.websearch/{02f24e66-a29a-4f57-ab36-6018bd7cb926}.",
         "name": "Google",
         "trigger": "gg ",
         "url": "https://www.google.com/search?q=%s"
@@ -30,10 +30,10 @@
         "url": "http://www.ebay.com/sch/i.html?_nkw=%s"
     },
     {
-        "iconPath": ":github",
+        "iconPath": "/home/pedro/.config/albert/org.albert.extension.websearch/{7d948fa5-cefc-4744-b8c2-33011946754e}.",
         "name": "GitHub",
         "trigger": "gh ",
-        "url": "https://github.com/search?utf8=✓&q=%s"
+        "url": "https://github.com/%s"
     },
     {
         "iconPath": ":wolfram",
