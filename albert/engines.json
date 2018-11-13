@@ -30,10 +30,10 @@
         "url": "http://www.ebay.com/sch/i.html?_nkw=%s"
     },
     {
-        "iconPath": "/home/pedro/.config/albert/org.albert.extension.websearch/{7d948fa5-cefc-4744-b8c2-33011946754e}.",
+        "iconPath": "/home/pedro/.config/albert/org.albert.extension.websearch/{062c3f78-aaa9-4b53-b675-5f028748aa45}.",
         "name": "GitHub",
         "trigger": "gh ",
-        "url": "https://github.com/%s"
+        "url": "https://github.com/search?utf8=✓&q=%s"
     },
     {
         "iconPath": ":wolfram",
