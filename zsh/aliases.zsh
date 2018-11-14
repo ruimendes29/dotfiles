@@ -5,7 +5,6 @@ unalias please
 alias dot="cd $HOME/.dotfiles"
 
 alias c="cd $HOME/Code && ls -l"
-alias go="cd $HOME/Code/tic-tac-go && vim"
 
 # UNIVERSITY RELATED
 alias um="cd $HOME/Code/uminho/"
