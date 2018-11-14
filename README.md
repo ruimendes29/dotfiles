@@ -26,3 +26,7 @@ cd ~
 rm -rf ~/.dotfiles
 rm -rf ~/.spells
 ```
+
+## Credits
+
+[Nelson Estevão] (github.com/nelsonmestevao)
