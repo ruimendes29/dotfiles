@@ -145,6 +145,9 @@ bindsym $mod+space focus mode_toggle
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
 
+# execute script that switches between monitors
+bindsym $mod+Shift+m exec ~/.dotfiles/i3wm/monitor.sh
+
 # focus the parent container
 bindsym $mod+a focus parent
 
