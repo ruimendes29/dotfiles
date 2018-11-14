@@ -170,9 +170,9 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1   "1:  Slack"
 set $ws2   "2:  Terminal"
 set $ws3   "3:  Chrome"
-set $ws4   "4:  Trello"
-set $ws5   "5:  Terminal"
-set $ws6   "6: "
+set $ws4   "4:  WhatsApp"
+set $ws5   "5:  Discord"
+set $ws6   "6:  Mailspring"
 set $ws7   "7: "
 set $ws8   "8:  Code"
 set $ws9   "9:  Keybase"
@@ -216,12 +216,17 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
 assign [class="Slack"]         $ws1
+assign [class="Terminal"]      $ws2
 assign [class="Google-chrome"] $ws3
-assign [class="Trello"]        $ws4
-assign [class="Code"]          $ws2
+assign [class="WhatsApp"]      $ws4
+assign [class="Discord"]       $ws5
+assign [class="Mailspring"]    $ws6
 assign [class="Keybase"]       $ws9
 assign [class="Spotify"]       $ws10
-for_window [class="Spotify"] move to workspace $ws10
+for_window [title="WhatsApp"] move to workspace $ws4
+for_window [title="Discord"] move to workspace $ws5
+for_window [title="Spotify"] move to workspace $ws10
+for_window [title="Mailspring"] move to workspace $ws6
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
