@@ -457,7 +457,7 @@ exec chmod go-w ~/.dotfiles/haskell/ghci
 exec_always --no-startup-id ~/.spells/polybarlaunch.sh
 exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/cinnamon_default.jpg
 
-exec xrandr --output HDMI1 --auto --right-of eDP1
+exec ~/.dotfiles/i3wm/monitor.sh
 
 # Keyboard Remaps
 exec --no-startup-id numlockx on
