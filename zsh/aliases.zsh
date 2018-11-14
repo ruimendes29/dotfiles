@@ -2,10 +2,10 @@
 unalias please
 
 # "MUST HAVE" ALIASES
-alias dot="cd $HOME/.dotfiles && code ."
+alias dot="cd $HOME/.dotfiles"
 
 alias c="cd $HOME/Code && ls -l"
-alias s="cd $HOME/Snippets && ls -l"
+alias go="cd $HOME/Code/tic-tac-go && vim"
 
 # UNIVERSITY RELATED
 alias um="cd $HOME/Code/uminho/"
