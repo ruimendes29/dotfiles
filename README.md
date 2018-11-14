@@ -11,11 +11,8 @@
 ## Install
 
 ```shell
-git clone https://github.com/nelsonmestevao/dotfiles ~/.dotfiles
-<<<<<<< HEAD
-=======
-git clone https://github.com/nelsonmestevao/spells   ~/.spells
->>>>>>> 8d0471f
+git clone https://github.com/pedroribeiro22/dotfiles ~/.dotfiles
+git clone https://github.com/pedoribeiro22/spells   ~/.spells
 cd ~/.dotfiles
 sh install.sh
 ```
