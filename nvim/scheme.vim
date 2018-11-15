@@ -25,7 +25,7 @@ set listchars+=nbsp:•
 
 set background=dark
 set termguicolors
-colorscheme hybrid_material
+colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 
 """ vim-airline
