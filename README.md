@@ -29,4 +29,4 @@ rm -rf ~/.spells
 
 ## Credits
 
-[Nelson Estevão] (github.com/nelsonmestevao)
+[Nelson Estevão] (https://github.com/nelsonmestevao)
