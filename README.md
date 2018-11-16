@@ -28,5 +28,5 @@ rm -rf ~/.spells
 ```
 
 ## Credits
-
-[Nelson Estevão] (https://github.com/nelsonmestevao)
+[nelson]: https://github.com/nelsonmestevao
+[Nelson Estevão] [nelson]
