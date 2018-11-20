@@ -25,11 +25,10 @@ set listchars+=nbsp:•
 
 set background=dark
 set termguicolors
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
+colorscheme vim-material
 
 """ vim-airline
-let g:airline_theme='hybrid'
+let g:airline_theme='material'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
