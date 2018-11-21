@@ -221,6 +221,7 @@ assign [class="Google-chrome"] $ws3
 assign [class="whats-app-nativefier-7bbd2c"]      $ws4
 assign [class="discord"]       $ws5
 assign [class="Mailspring"]    $ws6
+assign [class="Atom"]          $ws7
 assign [class="Keybase"]       $ws9
 for_window [title="Spotify"] move to workspace $ws10
 
