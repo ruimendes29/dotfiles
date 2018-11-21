@@ -28,5 +28,4 @@ rm -rf ~/.spells
 ```
 
 ## Credits
-[nelson]: "https://github.com/nelsonmestevao"
-[Nelson Estevão](https://github.com/nelsonmestevao)
+* [Nelson Estevão](https://github.com/nelsonmestevao)
