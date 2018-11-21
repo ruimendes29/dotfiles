@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <a target="_blank" href="https://dotfiles.github.io">
-    <img src="https://openclipart.org/image/2400px/svg_to_png/305854/1535649195.png" alt="dotfiles" width="400px">
+    <img src="https://openclipart.org/image/2400px/svg_to_png/305854/1535649195.png" alt="dotfiles" height="200px" width="200px">
   </a>
 </h1>
 
