@@ -71,6 +71,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Color Scheme
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'hzchirs/vim-material'
 
@@ -86,7 +87,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'carlosgaldino/elixir-snippets'
 
 " Haskell
-Plug 'dag/vim2hs'
+" Plug 'dag/vim2hs'
 Plug 'eagletmt/neco-ghc'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'

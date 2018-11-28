@@ -5,7 +5,7 @@ unalias please
 alias dot="cd $HOME/.dotfiles"
 
 alias c="cd $HOME/Code && ls -l"
-
+alias see="firefox"
 # UNIVERSITY RELATED
 alias um="cd $HOME/Code/uminho/"
 

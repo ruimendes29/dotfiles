@@ -25,10 +25,10 @@ set listchars+=nbsp:•
 
 set background=dark
 set termguicolors
-colorscheme vim-material
+colorscheme onedark
 
 """ vim-airline
-let g:airline_theme='material'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
