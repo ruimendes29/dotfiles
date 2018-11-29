@@ -17,11 +17,11 @@ set cursorline            " underline the current line, for quick orientation
 "set cursorcolumn
 
 " Highlight whitespaces
-set list
-set listchars=""
-set listchars+=tab:>-
-set listchars+=trail:•
-set listchars+=nbsp:•
+" set list
+" set listchars=""
+" set listchars+=tab:>-
+" set listchars+=trail:•
+" set listchars+=nbsp:•
 
 set background=dark
 set termguicolors
