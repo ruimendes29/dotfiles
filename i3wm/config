@@ -168,15 +168,15 @@ bindsym $mod+Ctrl+Left workspace prev
 ###############################################################################
 
 # Workspace names
-set $ws1   "1:  Slack"
+set $ws1   "1:  Code"
 set $ws2   "2:  Terminal"
 set $ws3   "3:  Chrome"
-set $ws4   "4:  WhatsApp"
+set $ws4   "4:  Slack"
 set $ws5   "5:  Discord"
 set $ws6   "6:  Mailspring"
-set $ws7   "7:  Atom"
-set $ws8   "8:  Code"
-set $ws9   "9:  Keybase"
+set $ws7   "7:  WhatsApp"
+set $ws8   "8: Blank"
+set $ws9   "9: Blank"
 set $ws10 "10:  Spotify"
 
 # switch to workspace
@@ -216,13 +216,13 @@ bindsym $mod+Shift+9 move container to workspace $ws9;  workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws1
 
 # Open applications on specific workspaces
-assign [class="Slack"]         $ws1
+assign [class="Code"]          $ws1
 assign [class="Terminal"]      $ws2
 assign [class="Google-chrome"] $ws3
-assign [class="whats-app-nativefier-7bbd2c"]      $ws4
+assign [class="Slack"]         $ws4
 assign [class="discord"]       $ws5
 assign [class="Mailspring"]    $ws6
-assign [class="Atom"]          $ws7
+assign [class="whats-app-nativefier-7bbd2c"]          $ws7
 assign [class="Keybase"]       $ws9
 for_window [title="Spotify"] move to workspace $ws10
 
