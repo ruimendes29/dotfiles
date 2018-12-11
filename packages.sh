@@ -38,14 +38,15 @@ export PKG=(
 export AUR=(
   betterlockscreen
   copyq
+  diff-so-fancy-git
   google-chrome-stable
   neovim
   nerd-fonts-complete
   playerctl
   pokemon-terminal-git
   polybar
-  trello
   spotify
+  trello
   watchexec
 )
 
