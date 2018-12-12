@@ -25,12 +25,12 @@ set cursorline            " underline the current line, for quick orientation
 
 set background=dark
 set termguicolors
-colorscheme material
+colorscheme gruvbox
 let g:material_theme_style = 'dark'
 
 
 """ vim-airline
-let g:airline_theme='material'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
