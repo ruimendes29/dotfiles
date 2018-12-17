@@ -25,7 +25,7 @@ set cursorline            " underline the current line, for quick orientation
 
 set background=dark
 set termguicolors
-colorscheme gruvbox
+colorscheme monokai
 
 
 """ vim-airline
