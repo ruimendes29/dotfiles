@@ -165,12 +165,17 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
+#kill and revive polybar
+bindsym $mod+o exec ~/.spells/polybarlaunch.sh
+bindsym $mod+p exec killall polybar
+
+
 ###############################################################################
 # Workspace bindings
 ###############################################################################
 
 # Workspace names
-set $ws1   "1:  Visual Studio Code"
+set $ws1   "1:  Code"
 set $ws2   "2:  Terminal"
 set $ws3   "3:  Chrome"
 set $ws4   "4:  Slack"
