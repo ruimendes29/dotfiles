@@ -181,9 +181,9 @@ set $ws3   "3:  Chrome"
 set $ws4   "4:  Slack"
 set $ws5   "5:  Discord"
 set $ws6   "6:  Mailspring"
-set $ws7   "7:  WhatsApp"
-set $ws8   "8:  Mupdf"
-set $ws9   "9: Blank"
+set $ws7   "7: "
+set $ws8   "8: "
+set $ws9   "9: "
 set $ws10 "10:  Spotify"
 
 # switch to workspace
@@ -223,14 +223,12 @@ bindsym $mod+Shift+9 move container to workspace $ws9;  workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws1
 
 # Open applications on specific workspaces
-assign [class="code-oss"]          $ws1
+assign [class="code-oss"]      $ws1
 assign [class="Terminal"]      $ws2
 assign [class="Google-chrome"] $ws3
 assign [class="Slack"]         $ws4
 assign [class="discord"]       $ws5
 assign [class="Mailspring"]    $ws6
-assign [class="whats-app-nativefier-7bbd2c"]          $ws7
-assign [class="mupdf"]         $ws8
 for_window [title="Spotify"] move to workspace $ws10
 
 # Open specific applications in floating mode
