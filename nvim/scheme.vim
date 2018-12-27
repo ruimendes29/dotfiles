@@ -5,6 +5,11 @@
 syntax on
 filetype plugin indent on
 
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 set wrap
 set ruler
 set title                 " change the terminal's title
@@ -23,16 +28,10 @@ set cursorline            " underline the current line, for quick orientation
 " set listchars+=trail:•
 " set listchars+=nbsp:•
 
-set background=dark
-set termguicolors
-colorscheme monokai
-
-
-""" vim-airline
-let g:airline_theme='gruvbox'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_powerline_fonts = 1
+" Theme
+syntax enable
+colorscheme OceanicNext
+" let g:gruvbox_contrast_dark = 'hard'
 
 " IndentLine
 let g:indentLine_enabled = 0
@@ -40,7 +39,11 @@ let g:indentLine_concealcursor = 0
 let g:indentLine_faster = 1
 let g:indentLine_char = '┆'
 
+
 " vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
