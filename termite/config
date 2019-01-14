@@ -9,7 +9,7 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Monaco, Regular 11
+font = Monospace, Regular 11
 scrollback_lines = 1000
 search_wrap = true
 cursor_blink = system
@@ -20,10 +20,10 @@ browser = google-chrome-stable
 # Base16 Oceanic Next
 # Scheme: Dmitri Voronianski (http://pixelhunter.me)
 
-foreground      = #C0C5CE
-foreground_bold = #C0C5CE
+foreground      = #2D2D2D
+foreground_bold = #2D2D2D
 cursor          = #C0C5CE
-background      = #1B2B34
+background      = #2D2D2D
 
 # 16 color space
 color0  = #1B2B34
@@ -46,7 +46,7 @@ color15 = #D8DEE9
 # 256 color space
 color16 = #F99157
 color17 = #AB7967
-color18 = #343D46
-color19 = #4F5B66
+color18 = #FFFFFF
+color19 = #FFFFFF
 color20 = #A7ADBA
 color21 = #CDD3DE
