@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 echo "Installling Neovim..."
-sudo apt-get install  neovim
+sudo pacman -S  neovim
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

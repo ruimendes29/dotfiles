@@ -29,9 +29,9 @@ set cursorline            " underline the current line, for quick orientation
 " set listchars+=nbsp:•
 
 " Theme
-syntax enable
-colorscheme OceanicNext
-" let g:gruvbox_contrast_dark = 'hard'
+syntax on
+colorscheme dracula
+let g:gruvbox_contrast_dark = 'hard'
 
 " IndentLine
 let g:indentLine_enabled = 0
