@@ -30,7 +30,7 @@ set cursorline            " underline the current line, for quick orientation
 
 " Theme
 syntax on
-colorscheme dracula
+colorscheme OceanicNext
 let g:gruvbox_contrast_dark = 'hard'
 
 " IndentLine
@@ -40,7 +40,8 @@ let g:indentLine_faster = 1
 let g:indentLine_char = '┆'
 
 
-" vim-airline
+" vim-airline"
+let g:airline_theme = 'oceanicnext'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
