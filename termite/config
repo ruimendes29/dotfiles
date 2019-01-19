@@ -28,7 +28,7 @@ browser = google-chrome-stable
 foreground      = #f8f8f2
 foreground_bold = #f8f8f2
 cursor          = #f8f8f2
-background      = #282a36
+background      = rgba(16, 16, 21, 0.7)
 
 # black
 color0  = #000000
