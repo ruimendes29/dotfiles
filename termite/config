@@ -22,42 +22,73 @@ browser = google-chrome-stable
 # Copyright 2013-present, All rights reserved
 # Code licensed under the MIT license
 
+
+
 [colors]
+# hard contrast: background = #1d2021
+background = #222D31
+# soft contrast: background = #32302f
+foreground = #d8d8d8
+foreground_bold = #ebdbb2
 
-# special
-foreground      = #f8f8f2
-foreground_bold = #f8f8f2
-cursor          = #f8f8f2
-background      = rgba(16, 16, 21, 0.7)
+# dark0 + gray
+color0 = #222D31
+color8 = #928374
 
-# black
-color0  = #000000
-color8  = #4d4d4d
+# neutral_red + bright_red
+color1 = #ab4642
+color9 = #fb4934
 
-# red
-color1  = #ff5555
-color9  = #ff6e67
+# neutral_green + bright_green
+color2 = #7E807E
+color10 = #b8bb26
 
-# green
-color2  = #50fa7b
-color10 = #5af78e
+# neutral_yellow + bright_yellow
+color3 = #f7ca88
+color11 = #fabd2f
 
-# yellow
-color3  = #f1fa8c
-color11 = #f4f99d
+# neutral_blue + bright_blue
+color4 = #7cafc2
+color12 = #7cafc2
 
-# blue
-color4  = #bd93f9
-color12 = #caa9fa
+# neutral_purple + bright_purple
+color5 = #ba8baf
+color13 = #d3869b
 
-# magenta
-color5  = #ff79c6
-color13 = #ff92d0
+# neutral_aqua + faded_aqua
+color6 = #1ABB9B
+color14 = #8ec07c
 
-# cyan
-color6  = #8be9fd
-color14 = #9aedfe
+# light4 + light1
+color7 = #d8d8d8
+color15 = #f8f8f8
 
-# white
-color7  = #bfbfbf
-color15 = #e6e6e6
+# vim: ft=dosini cms=#%s
+
+#[colors]
+#foreground = #839496
+#foreground_bold = #eee8d5
+#foreground_dim = #888888
+#background = #002b36
+#cursor = #93a1a1
+
+# if unset, will reverse foreground and background
+#highlight = #839496
+
+# colors from color0 to color254 can be set
+#color0 = #073642
+#color1 = #dc322f
+#color2 = #859900
+#color3 = #b58900
+#color4 = #268bd2
+#color5 = #d33682
+#color6 = #2aa198
+#color7 = #eee8d5
+#color8 = #002b36
+#color9 = #cb4b16
+#color10 = #586e75
+#color11 = #657b83
+#color12 = #839496
+#color13 = #6c71c4
+#color14 = #93a1a1
+#color15 = #fdf6e3
