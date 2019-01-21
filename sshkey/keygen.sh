@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-ssh-keygen -t rsa -C "$1"
+ssh-keygen -t rsa -C "pedrouminhoribeiro@gmail.com"
 
 SSH_PUB=$HOME/.ssh/id_rsa.pub
 
