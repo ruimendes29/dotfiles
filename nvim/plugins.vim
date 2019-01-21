@@ -75,6 +75,7 @@ Plug 'dracula/vim'
 Plug 'mhartington/oceanic-next'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'arcticicestudio/nord-vim'
 """ Languages
 
 " C

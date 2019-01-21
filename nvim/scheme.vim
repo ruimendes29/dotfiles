@@ -30,7 +30,7 @@ set cursorline            " underline the current line, for quick orientation
 
 " Theme
 syntax on
-colorscheme OceanicNext
+colorscheme nord
 let g:gruvbox_contrast_dark = 'hard'
 
 " IndentLine

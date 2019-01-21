@@ -1,5 +1,4 @@
 # UNALIASES
-unalias please
 
 # "MUST HAVE" ALIASES
 alias dot="cd $HOME/.dotfiles"
