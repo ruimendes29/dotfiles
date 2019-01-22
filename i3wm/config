@@ -183,9 +183,9 @@ set $ws2   "2:  Terminal"
 set $ws3   "3:  Chrome"
 set $ws4   "4:  Slack"
 set $ws5   "5:  Discord"
-set $ws6   "6:  Mailspring"
-set $ws7   "7: "
-set $ws8   "8: "
+set $ws6   "6:  Mailspring"
+set $ws7   "7:  Trello"
+set $ws8   "8:  WhatsApp"
 set $ws9   "9: "
 set $ws10 "10:  Spotify"
 
@@ -227,9 +227,11 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws1
 
 # Open applications on specific workspaces
 assign [class="code-oss"]      $ws1
-assign [class="Terminal"]      $ws2
+assign [class="Termite"]      $ws2
 assign [class="Google-chrome"] $ws3
 assign [class="Slack"]         $ws4
+assign [class="Trello"]        $ws7
+assign [class="whats-app-nativefier-d52542"] $ws8
 assign [class="discord"]       $ws5
 assign [class="Mailspring"]    $ws6
 for_window [title="Spotify"] move to workspace $ws10
