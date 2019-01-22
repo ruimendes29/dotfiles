@@ -1,6 +1,11 @@
 #!/usr/bin/env sh
 
-sudo yaourt -Syu albert --needed --noconfirm
+read -p "Have you installed Albert already?" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Nn]$ ]]
+then
+  sudo yaourt -S albert --needed --noconfirm
+fi
 
 sudo ln -sfT ~/.dotfiles/albert/albert.conf  ~/.config/albert/albert.conf
 sudo ln -sfT ~/.dotfiles/albert/engines.json ~/.config/albert/org.albert.extension.websearch/engines.json
