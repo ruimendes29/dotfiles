@@ -19,25 +19,28 @@ set showmatch             " set show matching parenthesis
 set colorcolumn=80
 
 set cursorline            " underline the current line, for quick orientation
-"set cursorcolumn
+" set cursorcolumn
 
 " Highlight whitespaces
 " set list
 " set listchars=""
 " set listchars+=tab:>-
-" set listchars+=trail:•
-" set listchars+=nbsp:•
+set listchars+=trail:•
+set listchars+=nbsp:•
 
 " Theme
 syntax on
 colorscheme gruvbox
-
+set background=light
 " IndentLine
 let g:indentLine_enabled = 0
 let g:indentLine_concealcursor = 0
 let g:indentLine_faster = 1
 let g:indentLine_char = '┆'
 
+" gruvbox options"
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
 
 " vim-airline"
 let g:airline_theme = 'gruvbox'
