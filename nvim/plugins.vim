@@ -18,11 +18,15 @@ endif
 " Plugins Install Packages
 call plug#begin(expand('~/.config/nvim/plugged'))
 
+" Games
+Plug 'vim-scripts/TeTrIs.vim'
+
 " IDE like plugins
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
+Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'Raimondi/delimitMate'
@@ -35,16 +39,19 @@ Plug 'w0rp/ale'
 " Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 "" Snippets
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
+
+" Org-Mode
+Plug 'jceb/vim-orgmode'
 
 " Git
 Plug 'tpope/vim-git'
@@ -69,12 +76,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Color Scheme
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim'
-Plug 'mhartington/oceanic-next'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
+
 """ Languages
 
 " C
@@ -85,6 +89,9 @@ Plug 'ludwig/split-manpage.vim'
 " Elixir
 Plug 'elixir-editors/vim-elixir'
 Plug 'carlosgaldino/elixir-snippets'
+
+" Go
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Haskell
 " Plug 'dag/vim2hs'
@@ -127,7 +134,15 @@ Plug 'ecomba/vim-ruby-refactoring'
 call plug#end()
 
 """ deoplete
-" let g:deoplete#enable_at_startup = 1
+" Enable deoplete on startup
+let g:deoplete#enable_at_startup = 1
+
+""" Ale
+" Error and warning signs.
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
 
 """ NERDTree
 "let NERDTreeShowHidden=1
@@ -172,10 +187,10 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 
 """ Snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+" let g:UltiSnipsEditSplit="vertical"
 
 """ Syntastic
 let g:syntastic_always_populate_loc_list=1
@@ -193,4 +208,15 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
+
+""" Go
+let g:go_fmt_command = "goimports"
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
 

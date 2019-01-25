@@ -51,11 +51,9 @@ nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
 "" Buffer nav
-noremap <leader>z :bp<CR>
+noremap <leader>b :Buffers<CR>
 noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
-noremap <leader>c :bd<CR>
 
 "" Clean search (highlight)
 nnoremap <localleader><leader> :noh<cr>
@@ -81,6 +79,9 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>a
 vnoremap <C-s> <Esc>:w<CR>
 
+" Indent all file and come back to where you were
+nnoremap <leader>gf gg=G``zz
+
 "" Copy/Paste/Cut
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
@@ -91,7 +92,7 @@ noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
 
 " Rename the current file
-noremap <Leader>r :call Rename()<CR>
+noremap <leader>r :call Rename()<CR>
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call SynStack()<CR>
@@ -106,15 +107,15 @@ noremap <localleader>f :NERDTreeFind<CR>
 " Git
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gp :Gpush<CR>
+noremap <Leader>gl :Gpull<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
 " Tagbar
-nmap <C-t> :TagbarToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
 
 " FZF
 nnoremap <leader>e :Files<CR>
@@ -187,88 +188,88 @@ augroup vimrc-javascript
 augroup END
 
 "" LaTeX
-  " Word count:
-  autocmd FileType tex map <F3> :w !detex \| wc -w<CR>
-  autocmd FileType tex inoremap <F3> <Esc>:w !detex \| wc -w<CR>
-  " Compile document using xelatex:
-  autocmd FileType tex inoremap <F5> <Esc>:!xelatex<space><c-r>%<Enter>a
-  autocmd FileType tex nnoremap <F5> :!xelatex<space><c-r>%<Enter>
-  " Code snippets
-  autocmd FileType tex inoremap ;fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
-  autocmd FileType tex inoremap ;fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
-  autocmd FileType tex inoremap ;exe \begin{exe}<Enter>\ex<Space><Enter>\end{exe}<Enter><Enter><++><Esc>3kA
-  autocmd FileType tex inoremap ,em \emph{}<++><Esc>T{i
-  autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>T{i
-  autocmd FileType tex inoremap ,it \textit{}<++><Esc>T{i
-  autocmd FileType tex inoremap ,ct \textcite{}<++><Esc>T{i
-  autocmd FileType tex inoremap ;cp \parencite{}<++><Esc>T{i
-  autocmd FileType tex inoremap ;glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
-  autocmd FileType tex inoremap ;x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
-  autocmd FileType tex inoremap ,ol \begin{enumerate}<Enter><Enter>\end{enumerate}<Enter><Enter><++><Esc>3kA\item<Space>
-  autocmd FileType tex inoremap ,ul \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
-  autocmd FileType tex inoremap ,li <Enter>\item<Space>
-  autocmd FileType tex inoremap ,ref \ref{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ,tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
-  autocmd FileType tex inoremap ;ot \begin{tableau}<Enter>\inp{<++>}<Tab>\const{<++>}<Tab><++><Enter><++><Enter>\end{tableau}<Enter><Enter><++><Esc>5kA{}<Esc>i
-  autocmd FileType tex inoremap ;can \cand{}<Tab><++><Esc>T{i
-  autocmd FileType tex inoremap ;con \const{}<Tab><++><Esc>T{i
-  autocmd FileType tex inoremap ;v \vio{}<Tab><++><Esc>T{i
-  autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
-  autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
-  autocmd FileType tex inoremap ,sec \section{}<Enter><Enter><++><Esc>2kf}i
-  autocmd FileType tex inoremap ,ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
-  autocmd FileType tex inoremap ,sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
-  autocmd FileType tex inoremap ;st <Esc>F{i*<Esc>f}i
-  autocmd FileType tex inoremap ;beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
-  autocmd FileType tex inoremap ;up <Esc>/usepackage<Enter>o\usepackage{}<Esc>i
-  autocmd FileType tex nnoremap ;up /usepackage<Enter>o\usepackage{}<Esc>i
-  autocmd FileType tex inoremap ;tt \texttt{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;bt {\blindtext}
-  autocmd FileType tex inoremap ;nu $\varnothing$
-  autocmd FileType tex inoremap ;col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
-  autocmd FileType tex inoremap ;rn (\ref{})<++><Esc>F}i
-  " LaTeX Logical symbols
-  autocmd FileType tex inoremap ;m $$<Space><++><Esc>2T$i
-  autocmd FileType tex inoremap ;M $$$$<Enter><Enter><++><Esc>2k$hi
-  autocmd FileType tex inoremap ;neg {\neg}
-  autocmd FileType tex inoremap ;V {\vee}
-  autocmd FileType tex inoremap ;or {\vee}
-  autocmd FileType tex inoremap ;L {\wedge}
-  autocmd FileType tex inoremap ;and {\wedge}
-  autocmd FileType tex inoremap ;ra {\rightarrow}
-  autocmd FileType tex inoremap ;la {\leftarrow}
-  autocmd FileType tex inoremap ;lra {\leftrightarrow}
-  autocmd FileType tex inoremap ;fa {\forall}
-  autocmd FileType tex inoremap ;ex {\exists}
-  autocmd FileType tex inoremap ;dia	{\Diamond}
-  autocmd FileType tex inoremap ;box	{\Box}
-  autocmd FileType tex inoremap ;gt	{\textgreater}
-  autocmd FileType tex inoremap ;lt	{\textless}
+" Word count:
+autocmd FileType tex map <F3> :w !detex \| wc -w<CR>
+autocmd FileType tex inoremap <F3> <Esc>:w !detex \| wc -w<CR>
+" Compile document using xelatex:
+autocmd FileType tex inoremap <F5> <Esc>:!xelatex<space><c-r>%<Enter>a
+autocmd FileType tex nnoremap <F5> :!xelatex<space><c-r>%<Enter>
+" Code snippets
+autocmd FileType tex inoremap ;fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
+autocmd FileType tex inoremap ;fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
+autocmd FileType tex inoremap ;exe \begin{exe}<Enter>\ex<Space><Enter>\end{exe}<Enter><Enter><++><Esc>3kA
+autocmd FileType tex inoremap ,em \emph{}<++><Esc>T{i
+autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>T{i
+autocmd FileType tex inoremap ,it \textit{}<++><Esc>T{i
+autocmd FileType tex inoremap ,ct \textcite{}<++><Esc>T{i
+autocmd FileType tex inoremap ;cp \parencite{}<++><Esc>T{i
+autocmd FileType tex inoremap ;glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
+autocmd FileType tex inoremap ;x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
+autocmd FileType tex inoremap ,ol \begin{enumerate}<Enter><Enter>\end{enumerate}<Enter><Enter><++><Esc>3kA\item<Space>
+autocmd FileType tex inoremap ,ul \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
+autocmd FileType tex inoremap ,li <Enter>\item<Space>
+autocmd FileType tex inoremap ,ref \ref{}<Space><++><Esc>T{i
+autocmd FileType tex inoremap ,tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
+autocmd FileType tex inoremap ;ot \begin{tableau}<Enter>\inp{<++>}<Tab>\const{<++>}<Tab><++><Enter><++><Enter>\end{tableau}<Enter><Enter><++><Esc>5kA{}<Esc>i
+autocmd FileType tex inoremap ;can \cand{}<Tab><++><Esc>T{i
+autocmd FileType tex inoremap ;con \const{}<Tab><++><Esc>T{i
+autocmd FileType tex inoremap ;v \vio{}<Tab><++><Esc>T{i
+autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
+autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
+autocmd FileType tex inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
+autocmd FileType tex inoremap ,sec \section{}<Enter><Enter><++><Esc>2kf}i
+autocmd FileType tex inoremap ,ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
+autocmd FileType tex inoremap ,sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
+autocmd FileType tex inoremap ;st <Esc>F{i*<Esc>f}i
+autocmd FileType tex inoremap ;beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
+autocmd FileType tex inoremap ;up <Esc>/usepackage<Enter>o\usepackage{}<Esc>i
+autocmd FileType tex nnoremap ;up /usepackage<Enter>o\usepackage{}<Esc>i
+autocmd FileType tex inoremap ;tt \texttt{}<Space><++><Esc>T{i
+autocmd FileType tex inoremap ;bt {\blindtext}
+autocmd FileType tex inoremap ;nu $\varnothing$
+autocmd FileType tex inoremap ;col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
+autocmd FileType tex inoremap ;rn (\ref{})<++><Esc>F}i
+" LaTeX Logical symbols
+autocmd FileType tex inoremap ;m $$<Space><++><Esc>2T$i
+autocmd FileType tex inoremap ;M $$$$<Enter><Enter><++><Esc>2k$hi
+autocmd FileType tex inoremap ;neg {\neg}
+autocmd FileType tex inoremap ;V {\vee}
+autocmd FileType tex inoremap ;or {\vee}
+autocmd FileType tex inoremap ;L {\wedge}
+autocmd FileType tex inoremap ;and {\wedge}
+autocmd FileType tex inoremap ;ra {\rightarrow}
+autocmd FileType tex inoremap ;la {\leftarrow}
+autocmd FileType tex inoremap ;lra {\leftrightarrow}
+autocmd FileType tex inoremap ;fa {\forall}
+autocmd FileType tex inoremap ;ex {\exists}
+autocmd FileType tex inoremap ;dia	{\Diamond}
+autocmd FileType tex inoremap ;box	{\Box}
+autocmd FileType tex inoremap ;gt	{\textgreater}
+autocmd FileType tex inoremap ;lt	{\textless}
 
 " .bib
-  autocmd FileType bib inoremap ,a @article{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>journal<Space>=<Space>"<++>",<Enter><tab>volume<Space>=<Space>"<++>",<Enter><tab>pages<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
-  autocmd FileType bib inoremap ,b @book{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>6kA,<Esc>i
-  autocmd FileType bib inoremap ,c @incollection{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>booktitle<Space>=<Space>"<++>",<Enter><tab>editor<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
+autocmd FileType bib inoremap ,a @article{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>journal<Space>=<Space>"<++>",<Enter><tab>volume<Space>=<Space>"<++>",<Enter><tab>pages<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
+autocmd FileType bib inoremap ,b @book{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>6kA,<Esc>i
+autocmd FileType bib inoremap ,c @incollection{<Enter><tab>author<Space>=<Space>"<++>",<Enter><tab>title<Space>=<Space>"<++>",<Enter><tab>booktitle<Space>=<Space>"<++>",<Enter><tab>editor<Space>=<Space>"<++>",<Enter><tab>year<Space>=<Space>"<++>",<Enter><tab>publisher<Space>=<Space>"<++>",<Enter><tab>}<Enter><++><Esc>8kA,<Esc>i
 
 "" Markdown
-  autocmd BufRead,BufNewFile *.md,*rmd setlocal spell
-  autocmd Filetype markdown,rmd inoremap ,i ![](<++>)<++><Esc>F[a
-  autocmd Filetype markdown,rmd inoremap ,a [](<++>)<++><Esc>F[a
-  autocmd Filetype markdown,rmd inoremap ,1 #<Space><Enter><++><Esc>kA
-  autocmd Filetype markdown,rmd inoremap ,2 ##<Space><Enter><++><Esc>kA
-  autocmd Filetype markdown,rmd inoremap ,3 ###<Space><Enter><++><Esc>kA
-  autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>--pdf-engine=xelatex<space>-o<space><C-r>%.pdf<Enter><Enter>
-  autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
-  autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
+autocmd BufRead,BufNewFile *.md,*rmd setlocal spell
+autocmd Filetype markdown,rmd inoremap ,i ![](<++>)<++><Esc>F[a
+autocmd Filetype markdown,rmd inoremap ,a [](<++>)<++><Esc>F[a
+autocmd Filetype markdown,rmd inoremap ,1 #<Space><Enter><++><Esc>kA
+autocmd Filetype markdown,rmd inoremap ,2 ##<Space><Enter><++><Esc>kA
+autocmd Filetype markdown,rmd inoremap ,3 ###<Space><Enter><++><Esc>kA
+autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>--pdf-engine=xelatex<space>-o<space><C-r>%.pdf<Enter><Enter>
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 
 "" Python
 " vim-python
 augroup vimrc-python
   autocmd!
   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+        \ formatoptions+=croq softtabstop=4
+        \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
 " jedi-vim
@@ -305,38 +306,13 @@ augroup vimrc-ruby
 augroup END
 
 let g:tagbar_type_ruby = {
-    \ 'kinds' : [
-        \ 'm:modules',
-        \ 'c:classes',
-        \ 'd:describes',
-        \ 'C:contexts',
-        \ 'f:methods',
-        \ 'F:singleton methods'
-    \ ]
-\ }
-
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-" For ruby refactory
-if has('nvim')
-  runtime! macros/matchit.vim
-else
-  packadd! matchit
-endif
-
-" Ruby refactory
-nnoremap <leader>rap  :RAddParameter<cr>
-nnoremap <leader>rcpc :RConvertPostConditional<cr>
-nnoremap <leader>rel  :RExtractLet<cr>
-vnoremap <leader>rec  :RExtractConstant<cr>
-vnoremap <leader>relv :RExtractLocalVariable<cr>
-nnoremap <leader>rit  :RInlineTemp<cr>
-vnoremap <leader>rrlv :RRenameLocalVariable<cr>
-vnoremap <leader>rriv :RRenameInstanceVariable<cr>
-vnoremap <leader>rem  :RExtractMethod<cr>
-
+      \ 'kinds' : [
+      \ 'm:modules',
+      \ 'c:classes',
+      \ 'd:describes',
+      \ 'C:contexts',
+      \ 'f:methods',
+      \ 'F:singleton methods'
+      \ ]
+      \ }
 

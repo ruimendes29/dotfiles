@@ -5,7 +5,6 @@
 syntax on
 filetype plugin indent on
 
-
 if (has("termguicolors"))
  set termguicolors
 endif
@@ -19,31 +18,39 @@ set showmatch             " set show matching parenthesis
 set colorcolumn=80
 
 set cursorline            " underline the current line, for quick orientation
-" set cursorcolumn
+"set cursorcolumn
 
 " Highlight whitespaces
-" set list
-" set listchars=""
-" set listchars+=tab:>-
+set list
+set listchars=""
+set listchars+=tab:>-
 set listchars+=trail:•
 set listchars+=nbsp:•
 
+
 " Theme
-syntax on
-colorscheme gruvbox
-set background=light
-" IndentLine
-let g:indentLine_enabled = 0
-let g:indentLine_concealcursor = 0
-let g:indentLine_faster = 1
-let g:indentLine_char = '┆'
+syntax enable
+colorscheme OceanicNext
+" let g:gruvbox_contrast_dark = 'hard'
 
-" gruvbox options"
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
+" Fuzzy finder
+let g:fzf_colors = {
+      \ 'fg':      ['fg', 'GruvboxGray'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'GruvboxRed'],
+      \ 'fg+':     ['fg', 'GruvboxGreen'],
+      \ 'bg+':     ['bg', 'GruvboxBg1'],
+      \ 'hl+':     ['fg', 'GruvboxRed'],
+      \ 'info':    ['fg', 'GruvboxOrange'],
+      \ 'prompt':  ['fg', 'GruvboxBlue'],
+      \ 'header':  ['fg', 'GruvboxBlue'],
+      \ 'pointer': ['fg', 'Error'],
+      \ 'marker':  ['fg', 'Error'],
+      \ 'spinner': ['fg', 'Statement'],
+      \ }
 
-" vim-airline"
-let g:airline_theme = 'gruvbox'
+" vim-airline
+" let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
@@ -77,3 +84,9 @@ let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ex'] = ''
 "let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
 "let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.gitignore'] = ''
+
+" IndentLine
+let g:indentLine_enabled = 0
+let g:indentLine_concealcursor = 0
+let g:indentLine_faster = 1
+let g:indentLine_char = '┆'
