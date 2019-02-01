@@ -78,6 +78,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Color Scheme
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kaicataldo/material.vim'
 
 """ Languages
 
