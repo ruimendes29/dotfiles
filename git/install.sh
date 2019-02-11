@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # cenas
 echo "Installing Git LFS..."
-sudo apt-get install git-lfs
+sudo pacman -Syu git-lfs --needed --noconfirm
 ln -sfT "$HOME/.dotfiles/git/gitconfig"  "$HOME/.gitconfig"
 
