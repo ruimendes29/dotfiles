@@ -40,6 +40,7 @@ set listchars+=nbsp:•
 " Theme
 let g:material_theme_style ='dark'
 let g:material_terminal_italics = 1
+set background=light
 syntax enable
 colorscheme gruvbox
 
