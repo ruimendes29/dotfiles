@@ -39,7 +39,7 @@ Plug 'w0rp/ale'
 " Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -65,7 +65,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Vim Terminal
-" Plug 'Shougo/deol.nvim'
+Plug 'Shougo/deol.nvim'
 
 " Vim-Session
 Plug 'xolox/vim-misc'
@@ -86,17 +86,17 @@ Plug 'morhetz/gruvbox'
 " C
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
-" Plug 'justinmk/vim-syntax-extra', { 'for': ['c', 'cpp', 'flex'] }
+Plug 'justinmk/vim-syntax-extra', { 'for': ['c', 'cpp', 'flex'] }
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
 Plug 'carlosgaldino/elixir-snippets'
 
 " Go
-" Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Haskell
-" Plug 'dag/vim2hs'
+Plug 'dag/vim2hs'
 Plug 'eagletmt/neco-ghc'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'
@@ -137,7 +137,7 @@ call plug#end()
 
 """ deoplete
 " Enable deoplete on startup
-" let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
 """ Ale
 " Error and warning signs.
