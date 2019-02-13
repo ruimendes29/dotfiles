@@ -6,6 +6,7 @@
 #   (_)___|___/_| |_|_|  \___|
 
 export DOTFILES="$HOME/.dotfiles"
+export PATH=$PATH:$HOME/.spells:$HOME/.spells/git
 
 source $DOTFILES/zsh/plugins.zsh
 source $DOTFILES/zsh/theme.zsh
@@ -14,6 +15,7 @@ source $DOTFILES/zsh/functions.zsh
 
 source $DOTFILES/asdf/asdf.init
 source $DOTFILES/haskell/haskell.init
+. $HOME/.spells/z.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -60,7 +60,9 @@
 [pull]
   rebase = true
 [url "git@github.com:pedroribeiro22/"]
-    insteadOf = gh:
+    insteadof = gh:
+[url "git@github.com:"]
+    insteadof = ghx:
 [url "git@gitlab.com:pedroribeiro22/"]
     insteadOf = gl:
 [color]
