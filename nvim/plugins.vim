@@ -95,7 +95,7 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Haskell
 Plug 'dag/vim2hs'
-Plug 'eagletmt/neco-ghc'
+" Plug 'eagletmt/neco-ghc'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'
 
