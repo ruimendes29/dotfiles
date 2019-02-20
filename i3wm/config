@@ -187,7 +187,7 @@ set $ws3   "3: Chrome"
 set $ws4   "4: Slack"
 set $ws5   "5: Discord"
 set $ws6   "6: Todoist"
-set $ws7   "7:"
+set $ws7   "7: WhatsApp"
 set $ws8   "8:"
 set $ws9   "9:"
 set $ws10 "10: Spotify"
@@ -235,6 +235,7 @@ assign [class="Google-chrome"] $ws3
 assign [class="Slack"]   $ws4
 assign [class="discord"] $ws5
 assign [class="Todoist"] $ws6
+assign [class="whats-app-nativefir-d52542"] $ws7
 for_window [title="Spotify"] move to workspace $ws10
 for_window [title="Todoist"] move to workspace $ws6
 # Open specific applications in floating mode
