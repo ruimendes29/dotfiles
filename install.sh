@@ -26,9 +26,7 @@ do
   sh "$dir"/install.sh
 done
 
-# sudo curl -o /usr/share/backgrounds/wallpaper.jpg  "https://images.pexels.com/photos/1707213/pexels-photo-1707213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-sudo curl -o /usr/share/backgrounds/wallpaper.jpg  "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-sudo curl -o /usr/share/backgrounds/login.jpg      "https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+sudo curl -o /usr/share/backgrounds/wallpaper.jpg  "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 
 cd "$SAVED_DIR"
 
