@@ -30,7 +30,7 @@ set listchars+=nbsp:•
 
 " Theme
 syntax enable
-colorscheme gruvbox
+colorscheme OceanicNext
 " let g:gruvbox_contrast_dark = 'hard'
 
 " Fuzzy finder
@@ -50,7 +50,7 @@ let g:fzf_colors = {
       \ }
 
 " vim-airline
-let g:airline_theme='gruvbox'
+" let g:airline_theme='OceanicNext'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
