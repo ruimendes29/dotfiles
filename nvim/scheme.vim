@@ -16,8 +16,8 @@ set showmode              " always show what mode we're currently editing in
 set number relativenumber " set hybrid line numbers
 set showmatch             " set show matching parenthesis
 set colorcolumn=80
+set cursorline            " underline the current line, for quick orientation
 
-" set cursorline            " underline the current line, for quick orientation
 "set cursorcolumn
 
 " Highlight whitespaces
@@ -30,7 +30,8 @@ set listchars+=nbsp:•
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+colorscheme one
+set background=dark
 " let g:gruvbox_contrast_dark = 'hard'
 
 " Fuzzy finder
@@ -50,7 +51,7 @@ let g:fzf_colors = {
       \ }
 
 " vim-airline
-" let g:airline_theme='OceanicNext'
+let g:airline_theme='one'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
