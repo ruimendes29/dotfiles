@@ -26,7 +26,7 @@ do
   sh "$dir"/install.sh
 done
 
-sudo curl -o /usr/share/backgrounds/wallpaper.jpg  "http://xboxportugal.com/wp-content/uploads/2018/08/minimalist-wallpaper-anime-1920x1080-fox-forest-minimalism-artwork-es.jpg"
+sudo curl -o /usr/share/backgrounds/wallpaper.jpg  "https://external-preview.redd.it/DmeNKK784pSPFsHhTRLZpD3P_MDuHz73G7QXu2DxqCw.png?auto=webp&s=a8997d2833ee45995dec08f521e6c0fdbd21af51"
 
 cd "$SAVED_DIR"
 
