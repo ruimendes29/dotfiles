@@ -15,6 +15,7 @@ alias gbkeyboard="setxkbmap -layout gb"
 
 # TEXT EDITING RELATED
 alias v="nvim"
+alias vim="nvim"
 alias r="ranger"
 alias p="sudo pacman"
 alias y="yaourt"
