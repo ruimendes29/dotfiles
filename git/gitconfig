@@ -1,8 +1,8 @@
 [user]
-  name = Pedro Ribeiro
-  email = pedrouminhoribeiro@gmail.com
+  name = Rui Mendes
+  email = ruifilipe29mendes@gmail.com
 [github]
-  user = pedroribeiro22
+  user = ruimendes29
 [web]
   browser = google-chrome-stable
 [core]
@@ -59,11 +59,11 @@
   default = simple
 [pull]
   rebase = true
-[url "git@github.com:pedroribeiro22/"]
+[url "git@github.com:ruimendes29/"]
     insteadof = gh:
 [url "git@github.com:"]
     insteadof = ghx:
-[url "git@gitlab.com:pedroribeiro22/"]
+[url "git@gitlab.com:ruimendes29/"]
     insteadOf = gl:
 [color]
   ui = true
